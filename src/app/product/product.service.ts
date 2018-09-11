@@ -7,11 +7,12 @@ import { Observable } from 'rxjs';
 })
 export class ProductService {
 
-  url = 'https://fast-ravine-56232.herokuapp.com/api/products';
+  private __url = 'https://fast-ravine-56232.herokuapp.com/api';
 
   constructor(private http: HttpClient) { }
 
   getProducts(): Observable<any> {
-    return this.http.get(this.url);
+    this.__url += '/products';
+    return this.http.get(this.__url);
   }
 }
