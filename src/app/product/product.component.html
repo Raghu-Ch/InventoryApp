@@ -1,3 +1,4 @@
 <section fxFlex=50 class="aligner">
-  <mat-card *ngFor="let product of products">{{product.productName}}</mat-card>
+  <mat-card *ngFor="let product of products" (click)="getProductById(product._id)">
+    {{product.productName}}</mat-card>
 </section>

@@ -4,20 +4,22 @@ import { RouterModule } from '@angular/router';
 
 import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
-
-
+import { MatButtonModule } from '@angular/material/button';
 
 import {ProductComponent} from '../product/product.component';
+import { ProductDetailComponent } from './product-detail.component';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
     MatTableModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
   ],
   declarations: [
-    ProductComponent
+    ProductComponent,
+    ProductDetailComponent
   ]
 })
 export class ProductModule { }

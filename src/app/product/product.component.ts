@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MatTableDataSource, MatSort } from '@angular/material';
-import { DataSource } from '@angular/cdk/table';
+import { RouterModule, Router } from '@angular/router';
 import { ProductService } from '../product/product.service';
+import { Product } from './product';
 
 @Component({
   selector: 'app-product',
@@ -9,20 +9,23 @@ import { ProductService } from '../product/product.service';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
+  products: Product[];
 
-  products = [];
-  displayedColumns = ['productName', 'brand', 'category', 'price'];
-
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService, private router: Router) { }
 
   ngOnInit() {
     this.getAllProducts();
   }
 
   getAllProducts(): void {
-    this.productService.getProducts().subscribe((res: any[]) => {
+    this.productService.getProducts().subscribe((res) => {
       this.products = res;
       console.log(this.products);
     });
   }
+
+  getProductById(id: string): void {
+    this.productService.getProduct(id).subscribe(res => console.log(res));
+  }
+
 }
