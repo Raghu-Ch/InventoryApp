@@ -20,7 +20,7 @@ export class ProductService {
 
   getProduct(id: string): Observable<Product> {
     const url = `${this.__url}/products/${id}`;
-    console.log(url);
+    // console.log(url);
     return this.http.get<Product>(url);
   }
 }

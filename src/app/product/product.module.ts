@@ -5,8 +5,10 @@ import { RouterModule } from '@angular/router';
 import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatGridListModule } from '@angular/material/grid-list';
 
-import {ProductComponent} from '../product/product.component';
+import { ProductComponent } from '../product/product.component';
 import { ProductDetailComponent } from './product-detail.component';
 
 @NgModule({
@@ -15,7 +17,9 @@ import { ProductDetailComponent } from './product-detail.component';
     RouterModule,
     MatTableModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDividerModule,
+    MatGridListModule
   ],
   declarations: [
     ProductComponent,

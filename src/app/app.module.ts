@@ -18,10 +18,12 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './product/product.component';
+import { ProductDetailComponent } from './product/product-detail.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'product', component: ProductComponent },
+  { path: 'product/:id', component: ProductDetailComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];

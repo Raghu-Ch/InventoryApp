@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterModule, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { ProductService } from '../product/product.service';
 import { Product } from './product';
 
@@ -22,10 +22,6 @@ export class ProductComponent implements OnInit {
       this.products = res;
       console.log(this.products);
     });
-  }
-
-  getProductById(id: string): void {
-    this.productService.getProduct(id).subscribe(res => console.log(res));
   }
 
 }
