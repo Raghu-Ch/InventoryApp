@@ -1,5 +1,5 @@
+<app-load-spinner *ngIf="showSpinner"></app-load-spinner>
 <section fxFlex=50 class="aligner">
   <mat-card *ngFor="let product of products" [routerLink]="['/product', product._id]" routerLinkActive="router-link-active">
     {{product.productName}}</mat-card>
 </section>
-

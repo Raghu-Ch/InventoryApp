@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { ProductService } from '../product/product.service';
 import { Product } from './product';
 
@@ -10,6 +11,7 @@ import { Product } from './product';
 })
 export class ProductComponent implements OnInit {
   products: Product[];
+  showSpinner = true;
 
   constructor(private productService: ProductService, private router: Router) { }
 
@@ -19,9 +21,9 @@ export class ProductComponent implements OnInit {
 
   getAllProducts(): void {
     this.productService.getProducts().subscribe((res) => {
+      this.showSpinner = false;
       this.products = res;
       console.log(this.products);
     });
   }
-
 }

@@ -19,6 +19,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './product/product.component';
 import { ProductDetailComponent } from './product/product-detail.component';
+// import { LoadSpinnerComponent } from './load-spinner/load-spinner.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },

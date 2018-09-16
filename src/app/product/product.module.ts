@@ -10,6 +10,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 
 import { ProductComponent } from '../product/product.component';
 import { ProductDetailComponent } from './product-detail.component';
+import { LoadSpinnerComponent } from '../load-spinner/load-spinner.component';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import { ProductDetailComponent } from './product-detail.component';
   ],
   declarations: [
     ProductComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    LoadSpinnerComponent
   ]
 })
 export class ProductModule { }
