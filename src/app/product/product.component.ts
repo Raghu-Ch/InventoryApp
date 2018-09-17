@@ -23,7 +23,7 @@ export class ProductComponent implements OnInit {
     this.productService.getProducts().subscribe((res) => {
       this.showSpinner = false;
       this.products = res;
-      console.log(this.products);
+      // console.log(this.products);
     });
   }
 }

@@ -1,8 +1,9 @@
 <section>
   <div class="content">
-    <h3>{{product.productName}}</h3>
-    <p>Brand: {{product.brand}}</p>
-    <p>$ {{product.price}}</p>
-    <p>{{product.category}}</p>
+    <h3>{{product?.productName}}</h3>
+    <p>ProductCode: {{product?.productCode}}</p>
+    <p>Brand: {{product?.brand}}</p>
+    <p>Price: ${{product?.price}}</p>
+    <p>{{product?.category}}</p>
   </div>
 </section>
