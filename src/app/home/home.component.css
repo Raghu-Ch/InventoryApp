@@ -31,12 +31,18 @@
   align-items: center;
 }
 
-.social {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-around;
-}
-
 h3>i {
   letter-spacing: 8px;
+}
+
+#note {
+  padding: 8px;
+  text-align: center;
+  color: deeppink;
+}
+
+.social {
+  color: #202124;
+  font-size: 14px;
+  text-decoration: none;
 }

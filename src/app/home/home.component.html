@@ -1,4 +1,4 @@
-<div class="viewer" fxLayout="column">
+<div class="viewer" fxLayout="column" fxLayoutGap=30px>
   <div class="view-wrapper">
     <div class="viewer-title">
       <h3><i>Awesome - Your dream's come true !!</i></h3>
@@ -6,14 +6,21 @@
     <div class="viwer-body" fxLayout="row">
       <img fxFlex=50 src="../../assets/images/wood-3157395_640.jpg" alt="Photo of a Shiba Inu">
       <div fxFlex=50 class="viewer-section">
-        <span>
-          Developed By: @Raghu Chagarlamudi
-          <div class="social" fxLayout="row">
-            <mat-icon class="viewer-section" fxFlex=50>code</mat-icon>
-            <mat-icon class="viewer-section" fxFlex=50>code</mat-icon>
+        <div fxLayout="column" fxLayoutGap='30px'>
+          <span>
+            Developed By: @Raghu Chagarlamudi
+          </span>
+          <div fxLayout="row">
+            <!-- <mat-icon class="viewer-section" fxFlex=50>code</mat-icon>
+                <mat-icon class="viewer-section" fxFlex=50>code</mat-icon> -->
+            <a class="social" target="_blank" fxFlex=50 fxLayoutAlign="center" href="https://github.com/Raghu-Ch">Github</a>
+            <a class="social" target="_blank" fxFlex=50 fxLayoutAlign="center" href="https://twitter.com/ng_raghuch?lang=en">Twitter</a>
           </div>
-        </span>
+        </div>
       </div>
     </div>
+  </div>
+  <div id="note" class="view-wrapper">
+    <p><strong>Note: For login - Please use user name as 'Admin' and use any password</strong></p>
   </div>
 </div>
