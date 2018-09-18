@@ -1,5 +1,4 @@
 <!--The content below is only a placeholder and can be replaced.-->
-
 <main fxLayout="column">
   <header>
     <mat-toolbar class="mat-elevation-z6">
@@ -12,7 +11,7 @@
         <a [routerLink]="['/hotdeals']" routerLinkActive="active">Sale</a>
       </nav>
       <span class="spacer"></span>
-      <button mat-raised-button>Login</button>
+      <button mat-raised-button [routerLink]="['/login']" routerLinkActive="router-link-active" >Login</button>
     </mat-toolbar>
   </header>
   <section>

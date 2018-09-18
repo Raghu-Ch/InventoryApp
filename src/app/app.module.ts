@@ -2,29 +2,24 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ProductModule } from '../app/product/product.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HomeComponent } from './home/home.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
+import { ProductModule } from '../app/product/product.module';
+import { UserModule } from './user/user.module';
+//  Angular Material
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
-import { MatBadgeModule } from '@angular/material/badge';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { HomeComponent } from './home/home.component';
-import { ProductComponent } from './product/product.component';
-import { ProductDetailComponent } from './product/product-detail.component';
-// import { LoadSpinnerComponent } from './load-spinner/load-spinner.component';
+
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'product', component: ProductComponent },
-  { path: 'product/:id', component: ProductDetailComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
@@ -38,16 +33,15 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     FlexLayoutModule,
     ProductModule,
-    HttpClientModule,
+    UserModule,
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
     MatTableModule,
     MatButtonModule,
-    MatBadgeModule,
-    MatTooltipModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
